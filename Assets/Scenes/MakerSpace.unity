@@ -1976,7 +1976,6 @@ GameObject:
   - component: {fileID: 463395856}
   - component: {fileID: 463395855}
   - component: {fileID: 463395854}
-  - component: {fileID: 463395858}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -2340,19 +2339,6 @@ MonoBehaviour:
   m_MoveObjectIn: 14
   m_MoveObjectOut: 15
   m_PoseProvider: {fileID: 0}
---- !u!135 &463395858
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463395852}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &488514035
 GameObject:
   m_ObjectHideFlags: 0
@@ -4768,6 +4754,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1067862577}
+  - component: {fileID: 1067862579}
+  - component: {fileID: 1067862578}
   m_Layer: 0
   m_Name: LidContainer
   m_TagString: Untagged
@@ -4783,7 +4771,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067862576}
   m_LocalRotation: {x: -0.75908476, y: -0, z: -0, w: 0.6509919}
-  m_LocalPosition: {x: 0, y: 6.14, z: -0.39}
+  m_LocalPosition: {x: 0, y: 6.182, z: -0.322}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6785960240990266396}
@@ -4791,6 +4779,58 @@ Transform:
   m_Father: {fileID: 5876142637814181218}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: -98.767, y: 0, z: 0}
+--- !u!59 &1067862578
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067862576}
+  m_ConnectedBody: {fileID: 0}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: -3.08, y: 2.97, z: -2.82}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 1.308, y: 1.1769054, z: -6.0969906}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 1
+  m_Limits:
+    min: 0
+    max: 97
+    bounciness: 0.1
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 1
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &1067862579
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067862576}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1081701412
 GameObject:
   m_ObjectHideFlags: 0
@@ -9424,6 +9464,7 @@ GameObject:
   - component: {fileID: 2649231443721651206}
   - component: {fileID: 6399415677527523563}
   - component: {fileID: 3527611955961381729}
+  - component: {fileID: 7054166275554206414}
   m_Layer: 0
   m_Name: Lid
   m_TagString: Untagged
@@ -9431,6 +9472,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7054166275554206414
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7054166275554206413}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.239572, y: 2.8000019, z: 0.88096744}
+  m_Center: {x: -3.028877, y: 1.500001, z: 2.5272179}
 --- !u!4 &7131545452810202173
 Transform:
   m_ObjectHideFlags: 0
