@@ -4797,11 +4797,11 @@ HingeJoint:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
-    targetVelocity: 0
-    force: 0
-    freeSpin: 0
+    targetVelocity: 80
+    force: 1
+    freeSpin: 1
   m_UseLimits: 1
   m_Limits:
     min: 0
@@ -4811,7 +4811,7 @@ HingeJoint:
     contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_EnableCollision: 1
+  m_EnableCollision: 0
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
@@ -9464,7 +9464,6 @@ GameObject:
   - component: {fileID: 2649231443721651206}
   - component: {fileID: 6399415677527523563}
   - component: {fileID: 3527611955961381729}
-  - component: {fileID: 7054166275554206414}
   m_Layer: 0
   m_Name: Lid
   m_TagString: Untagged
@@ -9472,19 +9471,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &7054166275554206414
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7054166275554206413}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.239572, y: 2.8000019, z: 0.88096744}
-  m_Center: {x: -3.028877, y: 1.500001, z: 2.5272179}
 --- !u!4 &7131545452810202173
 Transform:
   m_ObjectHideFlags: 0
