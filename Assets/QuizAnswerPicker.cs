@@ -8,6 +8,7 @@ public class QuizAnswerPicker : MonoBehaviour
     private void Start()
     {
         mat = GetComponent<Renderer>().material;
+        GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
         mat.SetColor("_EmissionColor", Color.green);
     }
 
