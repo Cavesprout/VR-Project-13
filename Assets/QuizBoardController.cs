@@ -23,13 +23,13 @@ public class QuizBoardController : MonoBehaviour
     private int selectedAnswer;
     private int questionSetterI;
     public QuizData ActiveQuiz;
-    private List<int> QuestionsIncorrect = new List<int>();
+    private List<int> QuestionsIncorrect;
 
     private void Start()
     {
         ActiveQuiz = LoadExampleQuiz();
         quizChosen = true;
-        selectedAnswer = -1;
+        
         StartQuiz();
     }
 
@@ -350,6 +350,9 @@ public class QuizBoardController : MonoBehaviour
     {
         if (quizChosen == true)
         {
+            EndScreen.SetActive(false);
+            selectedAnswer = -1;
+            QuestionsIncorrect = new List<int>();
             activeQuestion = 0;
             titleTXT.GetComponent<TMPro.TextMeshPro>().SetText(ActiveQuiz.Title);
             questionTXT.GetComponent<TMPro.TextMeshPro>().SetText(ActiveQuiz.Questions[activeQuestion]);
@@ -397,8 +400,6 @@ public class QuizBoardController : MonoBehaviour
             g.SetActive(false);
         }
         EndScreen.SetActive(true);
-
-        
     }
 
     private void NextQuestion()
@@ -416,6 +417,4 @@ public class QuizBoardController : MonoBehaviour
             answerField[questionSetterI].SetActive(false);
         }
     }
-
-
 }
