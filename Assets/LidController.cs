@@ -28,7 +28,6 @@ public class LidController : MonoBehaviour
             newTargetVelo = 80;
         }
         lidMotor.targetVelocity = newTargetVelo;
+        lidHinge.motor = lidMotor;
     }
-
-    
 }

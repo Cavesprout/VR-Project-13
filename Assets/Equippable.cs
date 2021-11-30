@@ -6,6 +6,6 @@ public class Equippable : MonoBehaviour
 {
     public void Equip()
     {
-        GetComponent<GameObject>().SetActive(false);
+        gameObject.SetActive(false);
     }
 }
