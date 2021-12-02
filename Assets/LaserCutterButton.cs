@@ -10,6 +10,7 @@ public class LaserCutterButton : MonoBehaviour
     {
         Material mat = GetComponent<Renderer>().material;
         mat.SetColor("_EmissionColor", Color.green);
+
     }
     
     public void HoverOver()

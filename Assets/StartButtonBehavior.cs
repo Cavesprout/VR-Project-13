@@ -21,7 +21,7 @@ public class StartButtonBehavior : MonoBehaviour
 
     public void StartLaserCutterTraining()
     {
-        SceneManager.LoadScene(sceneBuildIndex:0);
+        SceneManager.LoadScene(sceneBuildIndex:1, LoadSceneMode.Single);
         SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(0));
     }
 }

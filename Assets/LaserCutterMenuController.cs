@@ -17,6 +17,7 @@ public class LaserCutterMenuController : MonoBehaviour
     public GameObject Slider;
     public GameObject SliderBar;
     public GameObject Workbed;
+    public GameObject Workmaterial;
 
     string[] menuText = new string[7];
 
@@ -78,6 +79,7 @@ public class LaserCutterMenuController : MonoBehaviour
         bedHeight += deltaBedHeight;
         if (bedHeight > bedHeightMax)
         {
+
             bedHeight = bedHeightMax;
         }
         else if (bedHeight < bedHeightMin)
@@ -85,13 +87,14 @@ public class LaserCutterMenuController : MonoBehaviour
             bedHeight = bedHeightMin;
         }
         Workbed.transform.localPosition = new Vector3(0f, bedHeight, 0f);
+        Workmaterial.transform.position = new Vector3(Workmaterial.transform.position.x, Workmaterial.transform.position.y + deltaBedHeight, Workmaterial.transform.position.z);
     }
 
     public void powerButtonPressed()
     {
         if (poweredOn == false)
         {
-
+            changeText(menuText[0]);
         }
         else
         {
@@ -178,7 +181,7 @@ public class LaserCutterMenuController : MonoBehaviour
         {
             // Focus Menu
             case 2:
-                ChangeBedHeight(0.1f);
+                ChangeBedHeight(0.05f);
                 break;
             // Jog Menu
             case 3:
@@ -195,11 +198,11 @@ public class LaserCutterMenuController : MonoBehaviour
         {
             // Focus Menu
             case 2:
-                ChangeBedHeight(-0.1f);
+                ChangeBedHeight(-0.05f);
                 break;
             // Jog Menu
             case 3:
-                JogY(-0.1f);
+                JogY(0.1f);
                 break;
             default:
                 break;
@@ -257,7 +260,7 @@ public class LaserCutterMenuController : MonoBehaviour
         jogXMax = 3.75f;
         jogYMin = 0f;
         jogYMax = 2f;
-        bedHeight = 1.2f;
+        bedHeight = 0.5f;
         bedHeightMin = 0f;
         bedHeightMax = 1.5f;
         jobName = "ClemsonPaw";

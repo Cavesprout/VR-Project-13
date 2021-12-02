@@ -7,7 +7,8 @@ public class ProximityIndicator : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Laser Cutter Material")
+        Debug.Log("Focus Object Detected");
+        if (other.gameObject.tag == "LaserCutterMaterial")
         {
             GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
         }
@@ -15,7 +16,7 @@ public class ProximityIndicator : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Laser Cutter Material")
+        if (other.gameObject.tag == "LaserCutterMaterial")
         {
             GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
         }

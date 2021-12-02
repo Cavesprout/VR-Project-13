@@ -214,7 +214,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &64338811
 GameObject:
@@ -257,7 +257,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &166775455 stripped
 Transform:
@@ -900,7 +900,50 @@ Transform:
   m_LocalScale: {x: 1.1, y: 1, z: 1.4}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1180749808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1180749810}
+  - component: {fileID: 1180749809}
+  m_Layer: 0
+  m_Name: TutorialManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1180749809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180749808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7111a72412e52a14da6fbbfe7ae279fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1180749810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180749808}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.316456, y: 0.6825998, z: 1.767897}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1202807812
 GameObject:
@@ -1015,7 +1058,7 @@ Transform:
   m_Children:
   - {fileID: 1202807813}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1343262981
 MonoBehaviour:
@@ -1082,7 +1125,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
@@ -1403,7 +1446,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1902,6 +1945,150 @@ Transform:
   m_Father: {fileID: 1202807813}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1605694031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1605694033}
+  - component: {fileID: 1605694032}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1605694032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605694031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349b80de9a53b59418697bfc13e70870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: General
+    clip: {fileID: 8300000, guid: b55bc80a60d247543b1f5ee906ee2a68, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Final Reminders
+    clip: {fileID: 8300000, guid: 13b70e20ed95807498b25d6eda211a9a, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Menu
+    clip: {fileID: 8300000, guid: d870cfcce06bbba43833a6290ab69534, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Safety1
+    clip: {fileID: 8300000, guid: 2b19322ad5cdd2e4fa846cf1a02580a2, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Safety2
+    clip: {fileID: 8300000, guid: f8bf2b244fb901444b9dbbd9de5ec8ea, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Safety3
+    clip: {fileID: 8300000, guid: de64d80627d111f4daaeed02e9e7fe12, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Step 1 Intro
+    clip: {fileID: 8300000, guid: 3ab42be8afbd0a34fb51ff27d3dbbda2, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Step 1.1
+    clip: {fileID: 8300000, guid: 361ad7d8532cd8447909545b166050ff, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Step 1.2
+    clip: {fileID: 8300000, guid: 17ccc07b1aa771f4b8a6a008e03e0c1d, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Step 1.3
+    clip: {fileID: 8300000, guid: 5c47f6be60dd1104d8284b1590b2c7fe, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Step 1.4
+    clip: {fileID: 8300000, guid: 2ec230014aecf3640ac97578ebb5b4ff, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Step 1.5
+    clip: {fileID: 8300000, guid: 7c74cc15d8d32e44ea2770fd75ad8f48, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Step 2 Intro
+    clip: {fileID: 8300000, guid: addafbfaecd6b96429a2979c0c34f01a, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Step 2.1
+    clip: {fileID: 8300000, guid: 6edd7ff8edb354c4ba0a8c9cf992f692, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Step 2.2
+    clip: {fileID: 8300000, guid: 6c65e6f59d3f5274ab9f0d376fb71c6f, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Step 3 Intro
+    clip: {fileID: 8300000, guid: e1966d3427239c2449a2c89ac85e804f, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Step 3.1
+    clip: {fileID: 8300000, guid: 7554aa1438fe169439766614943d154e, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Step 3.2
+    clip: {fileID: 8300000, guid: e40f7e55052cb794b99258dbc0314ffb, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Step 3.3
+    clip: {fileID: 8300000, guid: 6147db063d47a95479020d5fe090b817, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Step Adobe Illustrator
+    clip: {fileID: 8300000, guid: b3755f0561111bf4fb5eaf8c55f0c913, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+--- !u!4 &1605694033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605694031}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.97506434, y: 1.6571648, z: -4.611603}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1687022870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2184,5 +2371,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}

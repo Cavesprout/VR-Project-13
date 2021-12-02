@@ -1,6 +1,8 @@
 using UnityEngine.Audio;
 using UnityEngine;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
@@ -30,7 +32,32 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void Play()
+    public IEnumerator PlaySounds(List<string> names)
+    {
+        foreach (string name in names)
+        {
+            Sound s = Array.Find(sounds, sound => sound.name == name);
+            if (s == null)
+            {
+                Debug.LogWarning($"Tried to play sound {s}, which does not exist.");
+                continue;
+            }
+            Debug.Log($"Playing sound {name} from group.");
+            s.source.Play();
+
+            while (s.source.isPlaying)
+            {
+                yield return null;
+            }
+        }
+    }
+
+    public void PlayStage0()
+    {
+
+    }
+
+    public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
@@ -38,6 +65,7 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning($"Tried to play sound {s}, which does not exist.");
             return;
         }
+        Debug.Log($"Playing sound {name}");
         s.source.Play();
     }
 
