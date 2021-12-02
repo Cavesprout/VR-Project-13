@@ -34,6 +34,8 @@ public class LaserCutterMenuController : MonoBehaviour
 
     float focus;
 
+    bool poweredOn;
+
     TimeSpan timeElapsed;
 
     int DPI;
@@ -83,6 +85,19 @@ public class LaserCutterMenuController : MonoBehaviour
             bedHeight = bedHeightMin;
         }
         Workbed.transform.localPosition = new Vector3(0f, bedHeight, 0f);
+    }
+
+    public void powerButtonPressed()
+    {
+        if (poweredOn == false)
+        {
+
+        }
+        else
+        {
+            poweredOn = false;
+            changeText("");
+        }
     }
 
     // Check all variables to see if job is ready to start (file sent to laser cutter, properly homed, properly focused)
@@ -254,6 +269,7 @@ public class LaserCutterMenuController : MonoBehaviour
         DPI = 600;
         jogX = 0.00f;
         jogY = 0.00f;
+        poweredOn = false;
         timeElapsed = new TimeSpan(0, 0, 0, 0);
         menuText[0] = "Version\n001.000.003.000";
         menuText[1] = $"Job: {jobName} \n{timeElapsed}  +{DPI} DPI";
