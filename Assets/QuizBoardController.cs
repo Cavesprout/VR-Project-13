@@ -27,7 +27,7 @@ public class QuizBoardController : MonoBehaviour
 
     private void Start()
     {
-        ActiveQuiz = LoadExampleQuiz();
+        ActiveQuiz = LoadLaserCutterQuiz();
         quizChosen = true;
         
         StartQuiz();
@@ -205,8 +205,9 @@ public class QuizBoardController : MonoBehaviour
         List<int> CorrectAnswers = new List<int>();
 
         // Add Question 1
-        qidx = 1;
+        qidx = 0;
         Questions.Add($"Question {qidx}: Which of these materials is flammable when laser cutting?");
+        Answers.Add(new List<String>());
         Answers[qidx].Add("All of these ");
         Answers[qidx].Add("Acrylic ");
         Answers[qidx].Add("Wood ");
@@ -214,67 +215,76 @@ public class QuizBoardController : MonoBehaviour
         CorrectAnswers.Add(0);
 
         // Add Question 2
-        qidx = 2;
+        qidx = 1;
         Questions.Add($"Question {qidx}: What signifies objects as vector shapes that will be traced (cut or scored) by the laser?");
+        Answers.Add(new List<String>());
         Answers[qidx].Add("Lineweight is set to .001” or less ");
         Answers[qidx].Add("Color ");
         Answers[qidx].Add("Assigning objects to a layer named “vector” ");
         CorrectAnswers.Add(0);
 
         // Add Question 3
-        qidx = 3;
+        qidx = 2;
         Questions.Add($"Question {qidx}: What signifies, to the laser software, to raster/engrave the interior of a shape onto a material?");
+        Answers.Add(new List<String>());
         Answers[qidx].Add("Blue stroke ");
         Answers[qidx].Add("Black/Grayscale fill ");
         Answers[qidx].Add("Red stroke ");
         CorrectAnswers.Add(1);
 
         // Add Question 4
-        qidx = 4;
+        qidx = 3;
         Questions.Add($"Question {qidx}: Adobe Illustrator is our recommended program to send jobs to the laser cutter/engraver");
+        Answers.Add(new List<String>());
         Answers[qidx].Add("True ");
         Answers[qidx].Add("False ");
         CorrectAnswers.Add(0);
 
         // Add Question 5
-        qidx = 5;
+        qidx = 4;
         Questions.Add($"Question {qidx}: When selecting the correct material preset and setting the material thickness, it is guaranteed to cut through the material.");
+        Answers.Add(new List<String>());
         Answers[qidx].Add("True ");
         Answers[qidx].Add("False ");
         CorrectAnswers.Add(1);
 
         // Add Question 6
-        qidx = 6;
+        qidx = 5;
         Questions.Add($"Question {qidx}: The lasers in the Makerspace can cut through aluminum.");
+        Answers.Add(new List<String>());
         Answers[qidx].Add("True ");
         Answers[qidx].Add("False ");
         CorrectAnswers.Add(1);
 
         // Add Question 7
-        qidx = 7;
+        qidx = 6;
         Questions.Add($"Question {qidx}: The focal distance from the lens to the top of your material is different for each material");
+        Answers.Add(new List<String>());
         Answers[qidx].Add("True ");
         Answers[qidx].Add("False ");
         CorrectAnswers.Add(1);
 
         // Add Question 8
-        qidx = 8;
+        qidx = 7;
         Questions.Add($"Question {qidx}: PVC (Polyvinyl Chloride) is a laser-safe material.");
+        Answers.Add(new List<String>());
         Answers[qidx].Add("True ");
         Answers[qidx].Add("False ");
         CorrectAnswers.Add(1);
 
         // Add Question 9
-        qidx = 9;
+        qidx = 8;
         Questions.Add($"Question {qidx}: If you have an uncommon material that shop staff are not sure is laser-safe...");
+        Answers.Add(new List<String>());
         Answers[qidx].Add("Test small cuts with the laser ");
         Answers[qidx].Add("Obtain a Safety Data Sheet (SDS) from the manufacturer to find out if it is toxic or corrosive when burned");
         Answers[qidx].Add("Ask a friend ");
         CorrectAnswers.Add(1);
 
         // Add Question 10
-        qidx = 10;
+        qidx = 9;
         Questions.Add($"Question {qidx}: When is it okay to leave the laser running unattended?");
+        Answers.Add(new List<String>());
         Answers[qidx].Add("For restroom breaks ");
         Answers[qidx].Add("Never. Its required to be watching it run. ");
         Answers[qidx].Add("When the fire alarm goes off ");
