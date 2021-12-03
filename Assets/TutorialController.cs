@@ -43,7 +43,7 @@ public class TutorialController : MonoBehaviour
         Tutorial = new List<TutorialStep>();
 
         // Play audio: Menu
-        Tutorial.Add(new TutorialStep(0, "Enter Laser Cutter Tutorial", true));
+        Tutorial.Add(new TutorialStep(0, "Enter Laser Cutter Tutorial", false));
 
         // Play audio: General -> Safety 1 -> Safety 2 -> Safety 3
         Tutorial.Add(new TutorialStep(1, "Open Project to Print", false));
@@ -83,7 +83,7 @@ public class TutorialController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        CompleteStep(0);
         
         
 

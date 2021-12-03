@@ -13,6 +13,8 @@ public class LaserCutterMenuController : MonoBehaviour
     public GameObject laserPointerRed;
     public GameObject laserPointerWhite;
     public GameObject text;
+    public GameObject OnLight;
+    public Material woodWorked;
 
     public GameObject Slider;
     public GameObject SliderBar;
@@ -103,10 +105,19 @@ public class LaserCutterMenuController : MonoBehaviour
         }
     }
 
+    IEnumerator RunLight(int x)
+    {
+        OnLight.SetActive(true);
+        yield return new WaitForSeconds(x);
+        OnLight.SetActive(false);
+        Workmaterial.GetComponent<Renderer>().material = woodWorked;
+    }
+
     // Check all variables to see if job is ready to start (file sent to laser cutter, properly homed, properly focused)
     public void goButtonPressed()
     {
-
+        StartCoroutine(RunLight(5));
+        
     }
 
     public void stopButtonPressed()
